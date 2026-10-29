@@ -15,7 +15,7 @@ export function DigestPage({ digest }: { digest: DigestNight }) {
       <h1>digest · {digest.night}</h1>
       {digest.badLines > 0 && (
         <p class="warn">
-          {digest.badLines} {digest.badLines === 1 ? 'line' : 'lines'} could not be parsed
+          {`${digest.badLines} bad ${digest.badLines === 1 ? 'line' : 'lines'} (could not be parsed)`}
         </p>
       )}
       {digest.rows.length === 0 ? (
